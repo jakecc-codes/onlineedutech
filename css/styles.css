@@ -1,0 +1,55 @@
+:root {
+    --primary-colour: limegreen;
+    --secondary-colour: whitesmoke;
+    --accent-colour: indigo;
+    --third-colour: black;
+}
+
+body {
+    background-color: var(--primary-colour);
+}
+
+.textaligncentre {
+    text-align: center;
+}
+
+.siteheader {
+    position: fixed;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 93%;
+    background-color: var(--secondary-colour);
+}
+.siteheadertable {
+    display: flex;
+    justify-content: space-between;
+}
+.siteheadernav {
+    text-align: center;
+    background-color: var(--accent-colour);
+    color: var(--secondary-colour);
+    box-shadow: 0px 2px 4px #a886b3;
+}
+.siteheadernavitem {
+    text-decoration: none;
+    color: var(--secondary-colour);
+}
+.brandname {
+    color: var(--accent-colour);
+}
+.brandlogo {
+    height: 50px;
+}
+.sitemain {
+    margin-top: 140px;
+}
+.sitemainsections {
+    width: 100%;
+}
+.default-text-colour {
+    color: var(--accent-colour);
+}
+.menu-text-colour {
+    color: var(--secondary-colour);
+}
