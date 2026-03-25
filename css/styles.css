@@ -78,6 +78,9 @@ body {
 .default-text-colour {
     color: var(--third-colour);
 }
+.p-text-colour {
+    color: var(--primary2-colour);
+}
 .menu-text-colour {
     color: var(--secondary-colour);
 }
