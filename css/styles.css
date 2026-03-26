@@ -92,7 +92,6 @@ h1, h2, h3, p {
     position: absolute;
     left: 0%;
     right: 0%;
-    bottom: 0%;
     color: var(--secondary-colour);
     background-color: var(--third-colour);
 }
