@@ -1,4 +1,4 @@
-const pathProduct = "/images/products/";
+const pathProduct = "images/products/";
 const slideRunTime = 5;
 const slides = [
     {price:20, src:"chinesegame.jpg", name:"Kids Toy", description:"Baby block stacker toy."},
@@ -32,7 +32,7 @@ if (SCONTAINER && SIMG && SNAME && SDESC && SPRICE) {
         SDESC.textContent = s.description;
         SIMG.animate([
             {opacity:'0', height:'200px'},
-            {opacity:'1', height:'410px'}
+            {opacity:'1', height:'405px'}
         ], {
             duration: 250,
             easing: 'ease-out' // Animated using a nice smooth curve, rather than a boring linear interpolation
