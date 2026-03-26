@@ -13,10 +13,22 @@ const SIMG = document.getElementById("simg");
 const SNAME = document.getElementById("sname");
 const SDESC = document.getElementById("sdesc");
 const SPRICE = document.getElementById("sprice");
+const SDOTS = document.getElementById("sdots");
 
 if (SCONTAINER && SIMG && SNAME && SDESC && SPRICE) {
     let sIndex = -1;
-    function showSlide() {
+    let sTimerID = null;
+    for (let i=0; i<slides.length; i++) {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        SDOTS?.appendChild(dot);
+        dot.addEventListener('click', (ev) => {
+            clearTimeout(sTimerID);
+            sIndex = i;
+            showSlide(sIndex);
+        }, {passive:true});
+    }
+    function showSlide(i = ++sIndex % slides.length) { // Some simple math which loops the index then increments it after the calculation is done
         SCONTAINER.animate([
             {width:'75%'},
             {width:'96%'}
@@ -24,8 +36,7 @@ if (SCONTAINER && SIMG && SNAME && SDESC && SPRICE) {
             duration: 300,
             easing: 'ease-in-out' // Animated using a nice smooth curve, rather than a boring linear interpolation
         }).play();
-        sIndex = ++sIndex % slides.length; // Some simple math which loops the index then increments it after the calculation is done
-        const s = slides[sIndex];
+        const s = slides[i];
         const priceSplit = s.price.toString().split('.'); // Converts number to string array, where [0] is dollars, [1] is cents
         SPRICE.innerHTML = `$${priceSplit[0]}<small>.${priceSplit[1] ?? '00'}<small>`;
         SNAME.textContent = s.name;
@@ -38,8 +49,12 @@ if (SCONTAINER && SIMG && SNAME && SDESC && SPRICE) {
             easing: 'ease-out' // Animated using a nice smooth curve, rather than a boring linear interpolation
         }).play();
         SIMG.src = pathProduct + s.src;
-
-        setTimeout(showSlide, slideRunTime*1000); // Changes current slide every 2 seconds
+        
+        sTimerID = setTimeout(showSlide, slideRunTime*1000); // Changes current slide every 2 seconds
+        const dots = document.getElementsByClassName('dot');
+        const selectedDots = document.getElementsByClassName('dot-select');
+        for (let i=0; i<selectedDots.length; i++) {selectedDots[i].classList.remove('dot-select');}
+        dots[i].classList.add('dot-select');
     }
     showSlide();
 }
