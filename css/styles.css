@@ -1,6 +1,7 @@
 :root {
-    --primary-colour: #34c534;
-    --primary2-colour: #1d511d;
+    --primary-colour: #30b630;
+    --primary2-colour: #186418;
+    --primary3-colour: #eaf6c0;
     --secondary-colour: #eefff5;
     --accent-colour: #510b84;
     --third-colour: #261129;
@@ -8,6 +9,10 @@
 
 body {
     background-color: var(--primary-colour);
+}
+h1, h2, h3, p {
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .textaligncentre {
@@ -19,7 +24,7 @@ body {
     left: 0%;
     right: 0%;
     top: 0%;
-    height: 115px;
+    height: 90px;
     background-color: var(--secondary-colour);
 }
 
@@ -49,8 +54,34 @@ body {
     height: 50px;
 }
 .sitemain {
-    margin-top: 115px;
-    height: 680px;
+    margin-top: 90px;
+    height: 765px;
+
+	display:ms-flexbox; /*compatibility for older browsers*/
+	display: flex;
+	-ms-flex-wrap:wrap; /*compatibility for older browsers*/
+	flex-wrap:wrap;
+}
+.sideleft{
+	-ms-flex:25%;  /*compatibility for older browsers*/
+	flex:25%;
+	padding:20px;
+}
+.sidemid{
+	-ms-flex:50%;  /*compatibility for older browsers*/
+	flex:50%;
+	padding:20px;
+}
+
+.sideright{
+	-ms-flex:5%;  /*compatibility for older browsers*/
+	flex:5%;
+	padding-top:20px;
+	background-color: var(--primary2-colour);
+    outline: 9px solid var(--primary2-colour);
+    display: flex;
+    justify-content: center;
+    box-shadow: -10px 0px 3px var(--secondary-colour);
 }
 .sitemainsections {
     width: 100%;
@@ -61,6 +92,7 @@ body {
     position: absolute;
     left: 0%;
     right: 0%;
+    bottom: 0%;
     color: var(--secondary-colour);
     background-color: var(--third-colour);
 }
@@ -78,9 +110,12 @@ body {
 .default-text-colour {
     color: var(--third-colour);
 }
-.p-text-colour {
-    color: var(--primary2-colour);
+.h-text-colour {
+    color: var(--primary3-colour);
 }
-.menu-text-colour {
+.p-text-colour {
+    color: var(--secondary-colour);
+}
+.menu-text-colour, hr {
     color: var(--secondary-colour);
 }
