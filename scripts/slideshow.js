@@ -1,5 +1,5 @@
 const pathProduct = "/images/products/";
-const slideRunTime = 3;
+const slideRunTime = 5;
 const slides = [
     {price:20, src:"chinesegame.jpg", name:"Kids Toy", description:"Baby block stacker toy."},
     {price:24.99, src:"twister.jpg", name:"Twisters Set", description:"Interactive game children's game. Including large mat and spinner."},
@@ -18,8 +18,8 @@ if (SCONTAINER && SIMG && SNAME && SDESC && SPRICE) {
     let sIndex = -1;
     function showSlide() {
         SCONTAINER.animate([
-            {opacity:'0.25', width:'70%'},
-            {opacity:'1', width:'96%'}
+            {width:'75%'},
+            {width:'96%'}
         ], {
             duration: 300,
             easing: 'ease-in-out' // Animated using a nice smooth curve, rather than a boring linear interpolation
@@ -30,6 +30,13 @@ if (SCONTAINER && SIMG && SNAME && SDESC && SPRICE) {
         SPRICE.innerHTML = `$${priceSplit[0]}<small>.${priceSplit[1] ?? '00'}<small>`;
         SNAME.textContent = s.name;
         SDESC.textContent = s.description;
+        SIMG.animate([
+            {opacity:'0', height:'200px'},
+            {opacity:'1', height:'410px'}
+        ], {
+            duration: 250,
+            easing: 'ease-out' // Animated using a nice smooth curve, rather than a boring linear interpolation
+        }).play();
         SIMG.src = pathProduct + s.src;
 
         setTimeout(showSlide, slideRunTime*1000); // Changes current slide every 2 seconds

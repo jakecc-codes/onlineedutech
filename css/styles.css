@@ -1,7 +1,7 @@
 :root {
     --primary-colour: #30b630;
     --primary2-colour: #186418;
-    --primary3-colour: #eaf6c0;
+    --primary3-colour: #ccf6c0;
     --secondary-colour: #eefff5;
     --accent-colour: #510b84;
     --third-colour: #261129;
@@ -111,10 +111,10 @@ h1, h2, h3, p {
     color: var(--third-colour);
 }
 .h-text-colour {
-    color: var(--primary3-colour);
+    color: var(--secondary-colour);
 }
 .p-text-colour {
-    color: var(--secondary-colour);
+    color: var(--primary3-colour);
 }
 .menu-text-colour, hr {
     color: var(--secondary-colour);
