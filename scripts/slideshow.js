@@ -42,10 +42,10 @@ if (SCONTAINER && SIMG && SNAME && SDESC && SPRICE) {
         SNAME.textContent = s.name;
         SDESC.textContent = s.description;
         SIMG.animate([
-            {opacity:'0', height:'200px'},
-            {opacity:'1', height:'405px'}
+            {opacity:'0.4'}
         ], {
-            duration: 250,
+            duration: 400,
+            direction: 'reverse',
             easing: 'ease-out' // Animated using a nice smooth curve, rather than a boring linear interpolation
         }).play();
         SIMG.src = pathProduct + s.src;
