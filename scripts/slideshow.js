@@ -5,7 +5,7 @@ const slides = [
     {price:89.95, src:"twister.jpg", name:"Twisters Set", description:"Interactive game children's game. Including large mat and spinner."},
     {price:69.95, src:"drseuss.jpg", name:"Dr. Seuss's Beginner Book Collection", description:"A Book Collection from the famous author, Dr. Seuss."},
     {price:89.95, src:"backtoschool.jpg", name:"BackToSchool Bundle", description:"Calculator, Notepad, Pencil Case and Plush Toy all in one set."},
-    {price:140, src:"tabletcase.jpg", name:"Blue Tablet Case", description:"Blue 15 inch Tablet Case, also comes in other colours."},
+    {price:140, src:"hotdots.jpg", name:"Hot Dots", description:"Teach your child to read and write using this interactive pen."},
 ];
 
 // S is short for Slide
