@@ -55,7 +55,7 @@ h1, h2, h3, p {
 }
 .sitemain {
     margin-top: 90px;
-    height: 765px;
+    min-height: 765px;
 
 	display:ms-flexbox; /*compatibility for older browsers*/
 	display: flex;
@@ -189,4 +189,52 @@ h1, h2, h3, p {
 }
 .product-buy:hover {
     background-color: var(--accent-colour);
+}
+
+.search-offset {
+    margin-right: 10px;
+}
+
+.siteheadernav-width {
+    width: 50%;
+}
+
+.sidemid-heading {
+    margin-top: 0px;
+    margin-bottom: 16px;
+}
+
+.sideright-centre {
+    display: flex;
+    flex-direction: column;
+}
+
+.sideright-img {
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+    margin-left: 20px
+}
+.sideright-map {
+    width: 400px;
+    height: 280px;
+    border:0;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+.table-style, .table-style th, .table-style td {
+    background-color: var(--primary3-colour);
+    color: var(--third-colour);
+    border: 2px solid var(--secondary-colour);
+    border-collapse: collapse;
+    width: 30%;
+    text-align: center;
+}
+
+.form-style {
+    margin-right: 2%;
+    background-color: var(--third-colour);
+    border-radius: 24px;
+    padding: 30px;
 }

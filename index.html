@@ -7,17 +7,18 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+    <!--This section represents the site's Navigation Bar-->
     <div class="siteheader">
         <div class="siteheadertable">
             <div>
                 <a href="index.html"><img class="brandlogo" src="images/logo.png"/></a>
             </div>
             <div>
-                <input style="margin-right: 10px;" type="text" placeholder="Search.."/>
+                <input class="search-offset" type="text" placeholder="Search.."/>
             </div>
         </div>
         <div class="siteheadernav">
-            <table style="width: 50%">
+            <table class="siteheadernav-width">
                 <tr>
                     <td class="siteheadernavitemselected">
                         <a class="siteheadernavitem" href="index.html"><p>Home</p></a>
@@ -46,7 +47,7 @@
 
         </div>
         <div class="sidemid">
-            <h1 class="h-text-colour" style="margin-top: 0px; margin-bottom: 16px;">Online Edu Tech Website</h1>
+            <h1 class="h-text-colour sitemid-heading">Online Edu Tech Website</h1>
             <p class="p-text-colour">Here you get will the best prices on Stationery Supplies, Children's Toys and Computer Supplies!</p>
             <p class="p-text-colour">Online Edu Tech is dedicated to providing high-quality educational resources. These policies govern all transactions, user behavior and product usage on our platform to ensure a safe, compliant and positive experience for customers and educators.</p>
             <br>
@@ -79,11 +80,11 @@
             </marquee>
         </div>
         <div class="sideright">
-            <div style="display: flex;flex-direction: column;">
+            <div class="sideright-centre">
                 <h3 class="menu-text-colour">Weekly Specials</h3>
-                <a href="pages/products.html"><img style="width: 340px; height: 340px; border-radius: 10px; margin-left: 20px" src="images/products/bundle.gif"/></a>
+                <a href="pages/products.html"><img class="sideright-img" src="images/products/bundle.gif"/></a>
                 <h3 class="menu-text-colour">Product Deliveries Avaliable!</h3>
-                <iframe style="width: 400px; height: 280px; border:0; border-radius: 10px; margin-left: 20px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1850.5153083457963!2d-61.38187708980922!3d10.648952660272851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c3601cd4cc44829%3A0x3f3234c0e10e5a4b!2sEl%20Dorado%20Police%20Youth%20Club%20building!5e0!3m2!1sen!2stt!4v1774538623952!5m2!1sen!2stt" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
+                <iframe class="sideright-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1850.5153083457963!2d-61.38187708980922!3d10.648952660272851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c3601cd4cc44829%3A0x3f3234c0e10e5a4b!2sEl%20Dorado%20Police%20Youth%20Club%20building!5e0!3m2!1sen!2stt!4v1774538623952!5m2!1sen!2stt" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
             </div>
         </div>
     </div>
@@ -97,6 +98,8 @@
             <a href="twitter.com"><img class="social-icon" src="images/socials/twitter.png" alt="twitter"/></a>
         </div>
     </div>
+    <!--Scripts are loaded after the page is loaded-->
+    <script src="scripts/localdatabase.js"></script>
     <script src="scripts/slideshow.js"></script>
 </body>
 </html>

@@ -13,11 +13,11 @@
                 <a href="../index.html"><img class="brandlogo" src="../images/logo.png"/></a>
             </div>
             <div>
-                <input style="margin-right: 10px;" type="text" placeholder="Search.."/>
+                <input class="search-offset" type="text" placeholder="Search.."/>
             </div>
         </div>
         <div class="siteheadernav">
-            <table style="margin-left: 1%; width: 50%">
+            <table class="siteheadernav-width">
                 <tr>
                     <td>
                         <a class="siteheadernavitem" href="../index.html"><p>Home</p></a>
@@ -42,31 +42,51 @@
         </div>
     </div>
     <div class="sitemain">
-        <table class="sitemainsections">
-            <tr>
-                <td style="width:75%">
-                    <img style="background-color: var(--secondary-colour); height: 170px;" src="../images/logo.png"/>
-                    <h2 class="default-text-colour">Contact Us</h2>
+        <div>
+
+        </div>
+        <div class="sidemid">
+            <h1 class="h-text-colour sitemid-heading">Contact Us</h1>
+            <img style="background-color: var(--secondary-colour); height: 170px;" src="../images/logo.png"/>
+            <div class="form-style"> <!--The ID property allows us to safely access the element via javascript-->
                     <p  class="p-text-colour">Leave a review, or send a message, we love to hear from you!</p>
                     <form style="background-color: var(--third-colour);">
-                        <label class="menu-text-colour" for="fname">First name:</label>
+                        <label class="menu-text-colour" for="fname">Firstname:</label>
                         <input type="text"><br/>
+                        <label class="menu-text-colour" for="fname">Surname:</label>
+                        <input type="text"><br/>
+                        <label class="menu-text-colour" for="fname">Email:</label>
+                        <input type="text"><br/>
+                        <label class="menu-text-colour" for="fname">Telephone:</label>
+                        <input type="text"><br/>
+                        <label class="menu-text-colour" for="fname">Country:</label>
+                        <select name="country" id="country">
+                            <option selected="" disabled="">Please Select Your Country</option>
+                            <option value="antigua">Antigua</option>
+                            <option value="barbados">Barbado</option>
+                            <option value="caymanislands">Cayman Islands</option>
+                            <option value="dominica">Dominica</option>
+                            <option value="stlucia">stlucia</option>
+                            <option value="jamaica">Jamaica</option>
+                            <option value="trinidad">Trinidad &amp; Tobago</option>
+                        </select><br/>
+                        <label class="menu-text-colour">Message:</label><br/>
+					    <textarea name="comments" placeholder="Write your Message here" cols="30" rows="10"></textarea>
 
                         <input type="submit"/>
                     </form>
                     <p class="p-text-colour">Email: onlineedutech@gmail.com</p>
                     <p class="p-text-colour">Telephone: (868)223-9433</p>
-                </td>
-                <td style="background-color: var(--primary2-colour); outline: 11px solid var(--primary2-colour);">
-                    <div style="display: flex;flex-direction: column;">
-                        <h3 class="menu-text-colour">Weekly Specials</h3>
-                        <a href="../pages/products.html"><img style="width: 340px; height: 280px;" src="../images/products/bundle.gif"/></a>
-                        <h3 class="menu-text-colour">Product Deliveries Avaliable!</h3>
-                        <iframe style="width: 250px; height: 250px;" src="https://www.openstreetmap.org/export/embed.html?bbox=-61.38374537229539%2C10.646729546677216%2C-61.38063400983811%2C10.648891087524516&amp;layer=mapnik" title="Our Location"></iframe>
-                    </div>
-                </td>
-            </tr>
-        </table>
+            </div>
+        </div>
+        <div class="sideright">
+            <div class="sideright-centre">
+                <h3 class="menu-text-colour">Weekly Specials</h3>
+                <a href="../pages/products.html"><img class="sideright-img" src="../images/products/bundle.gif"/></a>
+                <h3 class="menu-text-colour">Product Deliveries Avaliable!</h3>
+                <iframe class="sideright-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1850.5153083457963!2d-61.38187708980922!3d10.648952660272851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c3601cd4cc44829%3A0x3f3234c0e10e5a4b!2sEl%20Dorado%20Police%20Youth%20Club%20building!5e0!3m2!1sen!2stt!4v1774538623952!5m2!1sen!2stt" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
+            </div>
+        </div>
     </div>
     <div class="sitefooter">
         <div class="sitefooteritem">
